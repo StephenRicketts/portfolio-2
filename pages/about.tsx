@@ -4,6 +4,8 @@ import { AnimatedText } from "../components/AnimatedText";
 import { Layout } from "../components/Layout";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { Skills } from "../components/Skills";
+import { Experience } from "../components/Experience";
+import { Education } from "../components/Education";
 
 type Props = {};
 
@@ -49,9 +51,11 @@ const about = (props: Props) => {
                 </div>
               </div>
             </div>
-            <div className="col-span-2 bg-yellow-500">Fuck you patrick</div>
+            <div className="col-span-2 bg-yellow-500">:/</div>
           </div>
           <Skills />
+          <Experience />
+          <Education />
         </Layout>
       </main>
     </>
