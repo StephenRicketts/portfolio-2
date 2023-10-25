@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
 
-type Props = {}
-
-const useThemeSwitcher = (props: Props) => {
-  const preferDarkQuery = "(prefer-color-scheme: dark)";
-  const [mode, setMode] = useState <string>("");
+const useThemeSwitcher = () => {
+const preferDarkQuery = "(prefer-color-scheme: dark)";
+ const [mode, setMode] = useState("")
+ console.log("this is mode", mode)
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(preferDarkQuery);
@@ -34,7 +33,19 @@ const useThemeSwitcher = (props: Props) => {
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
-  return (
-null
-  )
+  useEffect(() => {
+    if (mode === "dark") {
+      window.localStorage.setItem("theme", "dark");
+      document.documentElement.classList.add("dark")
+    } else {
+      window.localStorage.setItem("theme", "light");
+      document.documentElement.classList.remove("dark");
+    }
+  }, [mode])
+
+  
+
+ return [mode, setMode]
 }
+
+export default useThemeSwitcher;

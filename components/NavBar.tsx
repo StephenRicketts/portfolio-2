@@ -3,11 +3,15 @@ import React from "react";
 import { Logo } from "./Logo";
 import { CustomLink } from "./CustomLink";
 import { GithubIcon, LinkedInIcon } from "./Icons";
+import { SunIcon, MoonIcon } from "./SunAnMoonIcons";
 import { motion } from "framer-motion";
+import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
 type Props = {};
 
 export const NavBar = (props: Props) => {
+  const [mode, setMode] = useThemeSwitcher();
+
   return (
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
       <nav>
@@ -37,6 +41,18 @@ export const NavBar = (props: Props) => {
         >
           <LinkedInIcon />
         </motion.a>
+        <button
+          onClick={() => {
+            // setMode(mode);
+          }}
+          className="ml-2 flex items-center justify-center rounded-full p-1 bg-red-500"
+        >
+          {mode === "dark" ? (
+            <SunIcon className={"fill-dark"} />
+          ) : (
+            <MoonIcon className={"fill-dark"} />
+          )}
+        </button>
       </nav>
     </header>
   );
