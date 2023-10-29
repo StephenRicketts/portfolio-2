@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 const useThemeSwitcher = () => {
 const preferDarkQuery = "(prefer-color-scheme: dark)";
  const [mode, setMode] = useState("")
- console.log("this is mode", mode)
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(preferDarkQuery);
@@ -29,6 +28,8 @@ const preferDarkQuery = "(prefer-color-scheme: dark)";
       }
     }
 
+    handleChange()
+
     mediaQuery.addEventListener("change", handleChange);
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
@@ -37,15 +38,21 @@ const preferDarkQuery = "(prefer-color-scheme: dark)";
     if (mode === "dark") {
       window.localStorage.setItem("theme", "dark");
       document.documentElement.classList.add("dark")
-    } else {
-      window.localStorage.setItem("theme", "light");
+    }
+
+    if (mode === "light") {
+      window.localStorage.setItem("theme", "light")
       document.documentElement.classList.remove("dark");
     }
+    
   }, [mode])
 
-  
+interface ThemeSwitcherReturnTypes {
+  mode: string,
+  setMode: React.Dispatch<React.SetStateAction<string>>
+}
 
- return [mode, setMode]
+ return {mode, setMode} as ThemeSwitcherReturnTypes
 }
 
 export default useThemeSwitcher;
