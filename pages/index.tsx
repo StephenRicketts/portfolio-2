@@ -1,40 +1,47 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import ThreeScene from "../components/ThreeScene";
+import { ThreeScene } from "../components/ThreeScene";
 import { Layout } from "../components/Layout";
 import { AnimatedText } from "../components/AnimatedText";
 import Link from "next/link";
 import { OutsideLinkIcon } from "../components/Icons";
 import { Footer } from "../components/Footer";
 import Image from "next/image";
+import developerImage from "../public/images/developerImage.jpg";
 import { TransitionEffect } from "../components/TransitionEffect";
 
 const Home: NextPage = () => {
   return (
     <>
-      {/* <ThreeScene /> */}
+      <div className="absolute z-10 w-96 h-96 bg-yellow-500">
+        <ThreeScene />
+      </div>
+
       <div>
         <Head>
           <title>Create Next App</title>
         </Head>
         <TransitionEffect />
         <main className=" dark:text-light">
-          <Layout className="pt-0 md:pt-16 sm:pt-8">
-            <div className="flex items-center justify-between w-full lg:flex-col">
-              <div className="bg-emerald-500 w-1/2 h-96">
-                {/* <Image priority sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"  /> */}
-              </div>
-              <div className="w-1/2 flex flex-col itemspcenter self-center lg:w-full lg:text-center">
+          <Layout className="pt-8 md:pt-16 sm:pt-8">
+            <div className="flex items-center justify-center w-full lg:flex-col text-center">
+              <div className="text-center ">
                 <AnimatedText
-                  text="Turning Vision Into Reality With Code and Design."
-                  className="!text-6xl xl:!text-5xl !text-left lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
+                  text="Architect of the internet."
+                  className="!text-6xl xl:!text-5xl lg:!text-6xl md:!text-5xl sm:!text-3xl"
                 />
-                <p className="py-4 text-base font-medium md:text-sm sm:text-xs">
-                  As a skilled full-stack developer, I am dedicated to turning
-                  ideas into innovative web applications and mobile. Explore my
-                  latest projects and and download my published apps.
+                <p className="py-4 font-medium text-2xl md:text-sm sm:text-xs">
+                  A full-stack developer and start-up vet. Putting complicating
+                  things together since 2019.
                 </p>
-                <div className="flex items-center self-start mt-2 lg:self-center">
+                <Image
+                  src={developerImage}
+                  alt="developer and desk"
+                  priority
+                  className="h-[650px] w-[650px] mx-auto my-10"
+                  // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                />
+                <div className="flex items-center justify-center">
                   <Link
                     className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold 
                     hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark 

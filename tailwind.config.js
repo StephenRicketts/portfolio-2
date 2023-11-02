@@ -14,10 +14,16 @@ module.exports = {
         mont: ["var(--font-mont)", ...fontFamily.sans],
       },
       colors: {
-        dark: "#1b1b1b",
-        light: "#f5f5f5f5",
-        primary: "#B63E96",
-        primaryDark: "#58E6D9",
+        dark: "#082f49",
+        light: "#f0f9ff",
+        primary: "#FFFF33",
+        primaryDark: "#fde68a",
+      },
+      dropShadow: {
+        glow: [
+          "0 0px 20px rgba(255,255, 255, 0.35)",
+          "0 0px 65px rgba(255, 255,255, 0.2)",
+        ],
       },
       backgroundImage: {
         circularLight:

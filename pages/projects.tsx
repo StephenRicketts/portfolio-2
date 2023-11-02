@@ -75,12 +75,29 @@ const projects = () => {
         <meta name="description" content="any description" />
       </Head>
       <TransitionEffect />
-      <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
+      <main className="w-full mb-20 flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
-          <AnimatedText
-            className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
-            text="Imagination Trumps Knowledge"
-          />
+          <div className="flex flex-col">
+            <div className="w-2/3 mx-auto">
+              <AnimatedText
+                className="lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
+                text="I'm a grinder. I grind because I worry."
+              />
+            </div>
+            <div className="flex justify-end items-end w-3/4">
+              <AnimatedText
+                className="text-xl !text-right"
+                text="-Tom Wambsgans (Succession, 2023)"
+              />
+            </div>
+          </div>
+          <div className="pt-12">
+            <p>
+              Do not be alarmed, I don&apos;t actually worry THAT much, I just
+              like that quote. But I do grind. And this grinding has resulted in
+              ALOT of production code.
+            </p>
+          </div>
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject

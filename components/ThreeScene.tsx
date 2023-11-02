@@ -1,55 +1,56 @@
-import React, { useRef, useEffect } from "react";
-import * as THREE from "three";
+import { Canvas } from "@react-three/fiber";
 
-const ThreeScene: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
+export function ThreeScene() {
+  return (
+    <div id="canvas-container">
+      <Canvas>
+        <ambientLight intensity={0.1} />
+        <directionalLight color="red" position={[0, 0, 5]} />
+        <mesh>
+          <boxGeometry args={[2, 2, 2]} />
+          <meshStandardMaterial />
+        </mesh>
+      </Canvas>
+    </div>
+  );
+}
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(
-        75,
-        window.innerWidth / window.innerHeight,
-        0.1,
-        1000
-      );
-      const renderer = new THREE.WebGLRenderer();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      containerRef.current?.appendChild(renderer.domElement);
-      camera.position.z = 5;
-      const geometry = new THREE.BoxGeometry();
-      const material = new THREE.MeshBasicMaterial({ color: "yellow" });
-      const cube = new THREE.Mesh(geometry, material);
-      scene.add(cube);
-      renderer.render(scene, camera);
+// import * as THREE from "three";
 
-      const handleResize = () => {
-        const width = window.innerWidth;
-        const height = window.innerHeight;
+// import { useEffect, useRef } from "react";
 
-        camera.aspect = width / height;
-        camera.updateProjectionMatrix();
+// function ThreeScene() {
+//   const refContainer = useRef(null);
+//   useEffect(() => {
+//     // === THREE.JS CODE START ===
+//     var scene = new THREE.Scene();
+//     var camera = new THREE.PerspectiveCamera(
+//       75,
+//       window.innerWidth / window.innerHeight,
+//       0.1,
+//       1000
+//     );
+//     var renderer = new THREE.WebGLRenderer({ alpha: true });
+//     renderer.setSize(window.innerWidth, window.innerHeight);
+//     // document.body.appendChild( renderer.domElement );
+//     // use ref as a mount point of the Three.js scene instead of the document.body
+//     refContainer.current &&
+//       //@ts-ignore
+//       refContainer.current.appendChild(renderer.domElement);
+//     var geometry = new THREE.BoxGeometry(1, 1, 1);
+//     var material = new THREE.MeshBasicMaterial({ color: "#ffffcc" });
+//     var cube = new THREE.Mesh(geometry, material);
+//     scene.add(cube);
+//     camera.position.z = 10;
+//     var animate = function () {
+//       requestAnimationFrame(animate);
+//       cube.rotation.x += 0.01;
+//       cube.rotation.y += 0.01;
+//       renderer.render(scene, camera);
+//     };
+//     animate();
+//   }, []);
+//   return <div ref={refContainer}></div>;
+// }
 
-        renderer.setSize(width, height);
-      };
-
-      const renderScene = () => {
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
-        renderer.render(scene, camera);
-        requestAnimationFrame(renderScene);
-      };
-
-      window.addEventListener("resize", handleResize);
-
-      // Clean up the event listener when the component is unmounted
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }
-  }, []);
-
-  return <div ref={containerRef} />;
-};
-
-export default ThreeScene;
+// export default ThreeScene;
