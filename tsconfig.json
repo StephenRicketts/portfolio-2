@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "components/ThreeScene.js"  ],
   "exclude": [
     "node_modules"
   ]

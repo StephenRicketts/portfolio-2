@@ -2,35 +2,39 @@ import Head from "next/head";
 import React from "react";
 import { Layout } from "../components/Layout";
 import { AnimatedText } from "../components/AnimatedText";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import resumePhoto from "../public/images/resumePhoto.jpeg";
+import { authText } from "../public/texts/featureText";
+import liiferAuthPng from "../public/images/liiferAuth.png";
 import { motion } from "framer-motion";
 import { TransitionEffect } from "../components/TransitionEffect";
 
-interface ProjectProps {
-  type: string;
+interface FeatureProps {
   title: string;
   summary: string;
-  img: string;
+  img: StaticImageData;
   link: string;
 }
 
 const FramerImage = motion(Image);
 
-const FeaturedProject: React.FC<ProjectProps> = ({
-  type,
-  title,
-  summary,
-  img,
-  link,
-}) => {
+const Feature: React.FC<FeatureProps> = ({ title, summary, img, link }) => {
   return (
     <article
       className="w-full flex items-center justify-between relative 
     rounded-3xl border border-solid border-dark dark:border-light bg-light shadow-2xl p-12 dark:bg-dark 
     lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4"
     >
+      <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
+        <Link href={link} className="hover:underline underline-offset-2">
+          <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light sm:text-sm">
+            {title}
+          </h2>
+        </Link>
+        <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">
+          {summary}
+        </p>
+      </div>
       <div
         className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light 
       rounded-br-3xl xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]"
@@ -41,28 +45,15 @@ const FeaturedProject: React.FC<ProjectProps> = ({
         className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
       >
         <FramerImage
-          src={resumePhoto}
+          src={img}
           alt={title}
-          className="w-full h-auto opacity-50"
+          className="w-full h-auto"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
         />
       </Link>
-      <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
-        <span className="text-primary dark:text-primaryDark font-medium text-xl xs:text-base">
-          {type}
-        </span>
-        <Link href={link} className="hover:underline underline-offset-2">
-          <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light sm:text-sm">
-            {title}
-          </h2>
-        </Link>
-        <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">
-          {summary}
-        </p>
-      </div>
     </article>
   );
 };
@@ -100,21 +91,19 @@ const projects = () => {
           </div>
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
-              <FeaturedProject
-                type="holder"
-                title="holder"
-                summary={" holder holder holder holder"}
+              <Feature
+                title="Authorization"
+                summary={authText}
                 link="holder"
-                img="holder"
+                img={liiferAuthPng}
               />
             </div>
             <div className="col-span-12 gap-y-12">
-              <FeaturedProject
-                type="holder"
+              <Feature
                 title="holder"
                 summary={" holder holder holder holder"}
                 link="holder"
-                img="holder"
+                img={liiferAuthPng}
               />
             </div>
             <div className="col-span-6">Project-1</div>

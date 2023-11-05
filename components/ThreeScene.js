@@ -2,7 +2,7 @@ import { Canvas } from "@react-three/fiber";
 
 export function ThreeScene() {
   return (
-    <div id="canvas-container">
+    <div id="canvas-container bg-yellow-500 h-10 w-10">
       <Canvas>
         <ambientLight intensity={0.1} />
         <directionalLight color="red" position={[0, 0, 5]} />
