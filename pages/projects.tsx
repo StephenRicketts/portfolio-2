@@ -9,9 +9,13 @@ import liiferAuthPng from "../public/images/liiferAuth.png";
 import liiferRestListPng from "../public/images/liiferRestList.png";
 import liiferIosPng from "../public/images/liiferiOS.png";
 import liiferAndroidPng from "../public/images/liiferAndroid.png";
+import liiferMenuPng from "../public/images/liiferMenu.png";
 import { motion } from "framer-motion";
 import { TransitionEffect } from "../components/TransitionEffect";
-import { CapacitorText } from "../components/FeatureTexts";
+import {
+  ApiCommunicationText,
+  CapacitorText,
+} from "../components/FeatureTexts";
 import { Feature } from "../components/Feature";
 
 const FramerImage = motion(Image);
@@ -48,6 +52,14 @@ const projects = () => {
             </p>
           </div> */}
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+            <div className="col-span-12">
+              <Feature
+                title="Performant API Communication"
+                summary={"holder"}
+                img={liiferMenuPng}
+                CustomTextBlock={ApiCommunicationText}
+              />
+            </div>
             <div className="col-span-12">
               <Feature
                 title="Authorization"

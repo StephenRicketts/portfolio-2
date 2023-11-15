@@ -7,6 +7,7 @@ import { OutsideLinkIcon } from "../components/Icons";
 import { Footer } from "../components/Footer";
 import { TransitionEffect } from "../components/TransitionEffect";
 import { OrbScene } from "../components/OrbScene";
+import ReactCurvedText from "react-curved-text";
 
 const Home: NextPage = () => {
   return (
@@ -21,14 +22,14 @@ const Home: NextPage = () => {
             <div className="w-1/2 ">
               <OrbScene />
             </div>
-            <div className="p-12 w-1/2 text-left">
+            <div className="p-16 w-1/2 text-left">
               <AnimatedText
                 text="Architect"
                 className="!text-6xl xl:!text-5xl lg:!text-6xl md:!text-5xl sm:!text-3xl !text-left !text-primary"
               />
               <AnimatedText
                 text="of the Internet"
-                className="!text-5xl xl:!text-4xl lg:!text-5xl md:!text-4xl sm:!text-2xl !text-left !text-primary"
+                className="!text-5xl xl:!text-4xl lg:!text-5xl md:!text-4xl sm:!text-2xl !text-left !text-primary -mt-2"
               />
               <p className="py-4 font-medium text-2xl md:text-sm sm:text-xs">
                 A full-stack developer and start-up vet. Experienced in web and

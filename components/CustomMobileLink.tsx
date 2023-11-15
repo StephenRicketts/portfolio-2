@@ -27,7 +27,7 @@ export const CustomMobileLink: React.FC<Props> = ({
   return (
     <button
       onClick={handleClick}
-      className={`${className} relative group text-light dark:text-dark my-2`}
+      className={`${className} relative group text-light dark:text-dark my-2 `}
     >
       {title}
       <span

@@ -30,7 +30,7 @@ export const Feature: React.FC<FeatureProps> = ({
     lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4`}
     >
       <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
-        <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-primary sm:text-sm">
+        <h2 className="my-2 w-3/4 text-left text-4xl font-bold dark:text-primary sm:text-sm">
           {title}
         </h2>
         <div>
