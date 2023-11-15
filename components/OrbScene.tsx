@@ -3,23 +3,22 @@ import React from "react";
 import developerImage from "../public/images/developerImage.png";
 import { motion } from "framer-motion";
 import "./storm.module.css";
-import { ThreeScene } from "./ThreeScene";
+import { ThreeScene } from "./three/ThreeScene";
 
 type Props = {};
 
 export const OrbScene = (props: Props) => {
   return (
-    <div className="storm bg-transparent flex flex-col justify-end items-center  border-orange-500  border overflow-hidden">
+    <div className=" bg-black flex flex-col justify-end items-center rounded-lg overflow-hidden h-[476px]">
       <motion.div
-        initial={{ y: 150, scale: 0.7 }}
-        animate={{ y: 25, scale: 1.5 }}
+        animate={{ y: 100, scale: 1.75 }}
         transition={{ delay: 0.5, duration: 5, ease: "easeInOut" }}
-        className="bg-red-400 h-60 w-32 rounded-full"
+        className="h-32 w-32 rounded-full"
       >
         <ThreeScene />
       </motion.div>
       <motion.div
-        initial={{ y: -10, scale: 0.7 }}
+        initial={{ y: 75, scale: 0.7 }}
         animate={{ y: 250, scale: 1.5 }}
         transition={{ delay: 0.5, duration: 5, ease: "easeInOut" }}
       >
