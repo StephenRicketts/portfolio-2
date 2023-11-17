@@ -25,38 +25,12 @@ const about = (props: Props) => {
             className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
-            <div className="col-span-3 flex flx-col items-start justify-start xl:col-span-4">
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                Biography
-              </h2>
-              <p className="font-medium">
-                - Hi, Im CodeBucks, a web developer and UI/UX designer with a
-                passion for creating beautiful, functional, and user-centered
-                digital experiences. With 4 years of experience in the field. I
-                am always looking for new and innovative ways to bring my
-                clients visions to life.
-              </p>
-              <p className="my-4 font-medium">
-                - I believe that design is about more than just making things
-                look pretty – its about solving problems and creating intuitive,
-                enjoyable experiences for users.
-              </p>
-              <p className="font-medium">
-                - Whether Im working on a website, mobile app, or other digital
-                product, I bring my commitment to design excellence and
-                user-centered thinking to every project I work on. I look
-                forward to the opportunity to bring my skills and passion to
-                your next project.
-              </p>
-            </div>
+            <div className="col-span-3 flex flx-col items-start justify-start xl:col-span-4"></div>
             <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border-light">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light dark:border-light">
-                <div className="w-full h-96 rounded-2xl bg-green-500">
-                  placeholder
-                </div>
+                <div className="w-full h-96 rounded-2xl ">placeholder</div>
               </div>
             </div>
-            <div className="col-span-2 bg-yellow-500">:/</div>
           </div>
           <Skills />
           <Experience />

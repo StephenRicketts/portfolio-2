@@ -11,7 +11,7 @@ type Props = {};
 export const OrbScene = (props: Props) => {
   const [showButtontext, setShowButtontext] = useState<boolean>(false);
   return (
-    <div className=" bg-black flex flex-col justify-end items-center rounded-lg overflow-hidden h-[525px] text-white">
+    <div className=" bg-black flex flex-col justify-end items-center rounded-lg overflow-hidden h-[500px] text-white shadow-lg">
       <motion.div
         animate={{ y: 100, scale: 2 }}
         transition={{ delay: 0.5, duration: 5, ease: "easeInOut" }}
