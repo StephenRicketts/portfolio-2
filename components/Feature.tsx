@@ -46,12 +46,12 @@ export const Feature: React.FC<FeatureProps> = ({
         className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light 
       rounded-br-3xl xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]"
       />
-      <div className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full">
+      <div className="w-1/2 cursor-pointer max-h-[475px] overflow-hidden rounded-lg lg:w-full">
         {!customImageBlock && !!img && (
           <FramerImage
             src={img}
             alt={title}
-            className="w-full h-auto"
+            className="w-full h-auto shadow-lg"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
             priority

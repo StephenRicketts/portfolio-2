@@ -1,18 +1,15 @@
 import Link from "next/link";
 import React from "react";
+import { TextLink } from "./TextLink";
 
 export const CapacitorText = () => {
   return (
     <div className="flex flex-col space-y-4 pr-10">
       <p className="">
         Through leveraging
-        <Link
-          target="_blank"
-          className="px-1 text-primary underline"
-          href={"https://capacitorjs.com/"}
-        >
+        <TextLink padding="px-1" href={"https://capacitorjs.com/"}>
           Capacitor
-        </Link>
+        </TextLink>
         I was able to create performant mobile ports for Liifer that run
         natively on iOS and Android.
       </p>
@@ -20,23 +17,21 @@ export const CapacitorText = () => {
         <p>
           These ports were both reviewed by Google and Apple and accepted into
           the
-          <Link
-            target="_blank"
-            className="px-1 text-primary underline"
+          <TextLink
+            padding="px-1"
             href={
               "https://play.google.com/store/search?q=Liifer&c=apps&hl=en&gl=US"
             }
           >
             Google Play Store
-          </Link>
+          </TextLink>
           and
-          <Link
-            target="_blank"
-            className="px-1 text-primary underline"
+          <TextLink
+            padding="px-1"
             href={"https://apps.apple.com/app/liifer/id6468917016"}
           >
             Apple App Store
-          </Link>
+          </TextLink>
         </p>
       </div>
     </div>
@@ -54,20 +49,16 @@ export const ApiCommunicationText = () => {
       </p>
       <p>
         To accomplish this I created
-        <Link
-          target="_blank"
-          className="text-primary px-1 underline"
+        <TextLink
+          padding="px-1"
           href="https://react.dev/learn/reusing-logic-with-custom-hooks#custom-hooks-sharing-logic-between-components"
         >
           custom hooks
-        </Link>
+        </TextLink>
         using
-        <Link
-          className="px-1 text-primary underline hover:text-yellow-400"
-          href={"https://tanstack.com/query/latest/"}
-        >
+        <TextLink padding="px-1" href={"https://tanstack.com/query/latest/"}>
           react-query
-        </Link>
+        </TextLink>
         . These custom hooks also allowed for some of the more complicated API
         requirements such as in-game notifications.
       </p>
@@ -79,26 +70,18 @@ export const AuthText = () => {
     <div className="space-y-2">
       <p>
         For authorization, Liifer uses
-        <Link
-          className="pl-1 dark:text-primaryDark text-primary underline hover:text-yellow-400"
-          target="_blank"
-          href={"https://auth0.com/docs"}
-        >
+        <TextLink padding="pl-1" href={"https://auth0.com/docs"}>
           0Auth 2.0
-        </Link>
+        </TextLink>
         , this requires handling of the associated JWT token. Storing the token,
         using it for secure API calls, and refreshing the token when necessary.
         Google and Discord buttons are also available for easy log in/sign up.
       </p>
       <p>
         Forms and client-side validation are implemented using
-        <Link
-          className="pl-1 dark:text-primaryDark text-primary underline hover:text-yellow-400"
-          target="_blank"
-          href={"https://react-hook-form.com/"}
-        >
+        <TextLink padding="pl-1" href={"https://react-hook-form.com/"}>
           react-hook-form
-        </Link>
+        </TextLink>
         .
       </p>
     </div>
@@ -110,13 +93,9 @@ export const OverwolfText = () => {
     <div className="space-y-2">
       <p>
         Through the
-        <Link
-          target="_blank"
-          href={"https://overwolf.github.io/api"}
-          className="pl-1 dark:text-primaryDark text-primary underline hover:text-yellow-400"
-        >
+        <TextLink href={"https://overwolf.github.io/api"} padding="pl-1">
           Overwolf API
-        </Link>
+        </TextLink>
         , Liifer is also available as an desktop app and ingame overlay that
         allows users to order food while gaming. The quality React code allows
         this functionality with no effect on the running game.
@@ -130,16 +109,44 @@ export const OverwolfText = () => {
       </p>
       <p>
         This app is available in the
-        <Link
-          target="_blank"
+        <TextLink
           href={
             "https://www.overwolf.com/app/Liifer_Technologies_Inc-Liifer_Application"
           }
-          className="px-1 dark:text-primaryDark text-primary underline hover:text-yellow-400"
+          padding="px-1"
         >
           Overwolf Store
-        </Link>{" "}
+        </TextLink>
         and currently has almost 5k downloads and maintains a 4.5/5 rating.
+      </p>
+    </div>
+  );
+};
+
+export const BackEndText = () => {
+  return (
+    <div>
+      <p>
+        The back-end of the Liifer app leverages a third party aggregator system
+        to access over 800,000 restaurants all over North America. The results
+        for nearby restaurants are based off of the users location, as set using
+        the
+        <TextLink
+          padding="pl-1"
+          href={
+            "https://developers.google.com/maps/documentation/places/web-service/overview"
+          }
+        >
+          {"google places API"}
+        </TextLink>
+        . This information is then rendered and then made searchable using
+        <TextLink
+          padding="pl-1"
+          href={"https://tanstack.com/table/v8/docs/guide/introduction"}
+        >
+          {"react-table"}
+        </TextLink>
+        .
       </p>
     </div>
   );

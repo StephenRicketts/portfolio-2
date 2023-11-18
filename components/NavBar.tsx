@@ -41,7 +41,7 @@ export const NavBar = (props: Props) => {
         ></span>
       </button>
 
-      <div className="w-full flex justify-between items-center lg:hidden">
+      <div className="w-full flex justify-between items-center lg:hidden  text-xl">
         <nav>
           <CustomLink title="home" href="/" className="mr-4" />
           <CustomLink title="about" href="/about" className="mx-4" />
