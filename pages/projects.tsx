@@ -23,6 +23,7 @@ import {
 import { Feature } from "../components/Feature";
 import { Footer } from "../components/Footer";
 import { TextLink } from "../components/TextLink";
+import { PublishedAppList } from "../components/PublishedAppList";
 
 const FramerImage = motion(Image);
 
@@ -36,7 +37,7 @@ const projects = () => {
       <TransitionEffect />
       <main className="w-full mb-20 flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
-          <div>
+          <div className="w-full sm:text-base sm:py-4 text-lg mx-auto pb-4">
             <p>
               For the last 2.5 years I have been employed full time by
               <TextLink padding="px-1" href={"https://liifer.com/home"}>
@@ -52,7 +53,6 @@ const projects = () => {
             <div className="col-span-12">
               <Feature
                 title="Performant API Communication"
-                summary={"holder"}
                 img={liiferMenuPng}
                 CustomTextBlock={ApiCommunicationText}
               />
@@ -61,7 +61,6 @@ const projects = () => {
               <Feature
                 reverseSides
                 title="In-Game/Desktop App"
-                summary={authText}
                 CustomTextBlock={OverwolfText}
                 img={overwolfPng}
               />
@@ -69,7 +68,6 @@ const projects = () => {
             <div className="col-span-12 gap-y-12">
               <Feature
                 title="An Extensive Back-End"
-                summary={restListText}
                 CustomTextBlock={BackEndText}
                 img={liiferRestListPng}
               />
@@ -78,7 +76,6 @@ const projects = () => {
               <Feature
                 reverseSides
                 title="iOS and Android"
-                summary={restListText}
                 img={liiferRestListPng}
                 CustomTextBlock={CapacitorText}
                 customImageBlock={
@@ -104,12 +101,12 @@ const projects = () => {
             <div className="col-span-12">
               <Feature
                 title="Authorization"
-                summary={authText}
                 CustomTextBlock={AuthText}
                 img={liiferAuthPng}
               />
             </div>
           </div>
+          <PublishedAppList />
         </Layout>
       </main>
       <Footer />
