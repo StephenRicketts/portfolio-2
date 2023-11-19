@@ -46,7 +46,6 @@ export const NavBar = (props: Props) => {
           <CustomLink title="home" href="/" className="mr-4" />
           <CustomLink title="about" href="/about" className="mx-4" />
           <CustomLink title="projects" href="/projects" className="mx-4" />
-          <CustomLink title="apps" href="/publishedApps" className="ml-4" />
         </nav>
 
         <nav className="flex items-center justify-center flex-wrap">

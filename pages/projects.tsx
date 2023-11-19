@@ -23,7 +23,6 @@ import {
 import { Feature } from "../components/Feature";
 import { Footer } from "../components/Footer";
 import { TextLink } from "../components/TextLink";
-import { PublishedAppList } from "../components/PublishedAppList";
 
 const FramerImage = motion(Image);
 
@@ -106,7 +105,6 @@ const projects = () => {
               />
             </div>
           </div>
-          <PublishedAppList />
         </Layout>
       </main>
       <Footer />
