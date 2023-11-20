@@ -12,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CustomLink } from "../components/CustomLink";
 import { TextLink } from "../components/TextLink";
+import { Footer } from "../components/Footer";
 
 type Props = {};
 
@@ -25,8 +26,11 @@ const about = (props: Props) => {
       <TransitionEffect />
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="p-16">
-          <div className="text-xl sm:text-base flex items-center justify-center space-x-2">
-            <div className="w-1/3">
+          <div className="text-xl sm:text-base sm:flex-col flex items-center justify-center space-x-2 ">
+            <div className="pb-2 sm:block hidden rounded-md overflow-hidden">
+              <Image className="" src={resumeJpeg} alt="Dev's Image" />
+            </div>
+            <div className="sm:w-full w-1/3">
               <h1 className="text-3xl text-center font-bold text-dark dark:text-light pb-6">
                 Bio
               </h1>
@@ -60,15 +64,15 @@ const about = (props: Props) => {
                 .
               </p>
             </div>
-            <div className="w-1/3 rounded-lg overflow-hidden shadow-xl border-[25px] border-dark dark:border-light">
+            <div className="w-1/3 sm:hidden rounded-lg overflow-hidden shadow-xl border-[25px] border-dark dark:border-light">
               <Image
-                className=" overflow-hidden"
+                className="overflow-hidden sm:hidden"
                 src={resumeJpeg}
                 alt="Dev's Image"
               />
             </div>
-            <div className="text-center  w-1/3">
-              <h1 className="text-dark dark:text-light sm:text-base lg:text-lg text-3xl font-bold pb-6">
+            <div className="text-center sm:w-full sm:pt-12 w-1/3">
+              <h1 className="text-dark dark:text-light sm:text-3xl lg:text-lg text-3xl font-bold pb-6">
                 Production Apps
               </h1>
               <ul className="space-y-4">
@@ -115,11 +119,16 @@ const about = (props: Props) => {
               </ul>
             </div>
           </div>
-          <Skills />
-          <Experience />
+          <div>
+            <Skills />
+          </div>
           <Education />
+          <div className="pt-6 pb-[83px]">
+            <Experience />
+          </div>
         </Layout>
       </main>
+      <Footer />
     </>
   );
 };
