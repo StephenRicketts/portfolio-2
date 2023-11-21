@@ -28,7 +28,7 @@ export const Skills = () => {
     "React",
     "TypeScript",
     "JavaScript",
-    "Tailwind CSS",
+    "Tailwind",
     "Next.js",
     "Git",
     "React Native",
@@ -38,31 +38,29 @@ export const Skills = () => {
     "Node.js",
     "MongoDB",
     "Jira",
-    "Auth0",
+    "0Auth",
   ];
   return (
     <>
-      <h2 className="font-bold text-5xl md:text-3xl mt-12 mb-2 md:mt-32 w-full text-center">
+      <h2 className="font-bold text-5xl lg:text-3xl md:text-3xl sm:mt-10 lg:pb-6 mt-12 mb-2 w-full text-center">
         Skills
       </h2>
-      {/* <div className="w-1/2 flex flex-wrap">
+      <div className="sm:flex md:flex lg:flex lg:w-3/4 flex-wrap hidden mx-auto">
         {skillList.map((skill: string) => {
           return (
             <div
               key={skill}
-              className="flex items-center justify-center bg-dark   h-10 text-light mb-2"
-              style={{
-                clipPath: "polygon(15% 0%, 100% 0, 85% 100%, 0% 100%)",
-              }}
+              className="flex items-center justify-center bg-dark rounded-md px-4 py-4 font-semibold h-10 text-light mb-2 mr-1 shadow-lg"
+              style={{}}
             >
               {skill}
             </div>
           );
         })}
-      </div> */}
+      </div>
 
       <div
-        className="w-full h-screen lg:h-[75vh] sm:h-[60vh] xs:h-[50vh] relative flex items-center justify-center rounded-full  
+        className="w-full h-screen sm:hidden md:hidden lg:hidden relative flex items-center justify-center rounded-full  
       bg-circularLight dark:bg-circularDark lg:bg-circularLightLg lg:dark:bg-circularDarkLg md:bg-circularLightMd md:dark:bg-circularDarkMd sm:bg-circularLightSm sm:dark:bg-circularDarkSm"
       >
         <Skill name="HTML" x="-20vw" y="2vw" />
@@ -76,7 +74,7 @@ export const Skills = () => {
         <Skill name="Mobile" x="-10vw" y="3vw" />
         <Skill name="React Native" x="3vw" y="-18vw" />
         <Skill name="JavaScript" x="-15vw" y="-5vw" />
-        <Skill name="Auth0" x="-9vw" y="-17vw" />
+        <Skill name="0Auth" x="-9vw" y="-17vw" />
         <Skill name="MongoDB" x="19vw" y="7vw" />
         <Skill name="Node.js" x="10vw" y="15vw" />
         <Skill name="Git" x="10vw" y="0vw" />

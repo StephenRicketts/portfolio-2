@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import developerImage from "../public/images/developerImage.png";
 import portalGif from "../public/images/portal.gif";
 import { motion } from "framer-motion";
-import "./storm.module.css";
 import ReactCurvedText from "react-curved-text";
 
 type Props = {};

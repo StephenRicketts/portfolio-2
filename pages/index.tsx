@@ -18,7 +18,7 @@ const Home: NextPage = () => {
         </Head>
         <TransitionEffect />
         <main className=" dark:text-light">
-          <Layout className="flex pt-16 md:pt-16 sm:pt-8">
+          <Layout className="flex md:!pt-16 sm:!pt-8">
             <div className="w-1/2 ">
               <OrbScene />
             </div>

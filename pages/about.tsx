@@ -26,11 +26,15 @@ const about = (props: Props) => {
       <TransitionEffect />
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="p-16">
-          <div className="text-xl sm:text-base sm:flex-col flex items-center justify-center space-x-2 ">
-            <div className="pb-2 sm:block hidden rounded-md overflow-hidden">
-              <Image className="" src={resumeJpeg} alt="Dev's Image" />
+          <div className="text-xl sm:text-base sm:flex-col md:flex-col lg:flex-col flex items-center justify-center space-x-2 ">
+            <div className="pb-2 sm:block md:block lg:block sm:w-4/5 md:w-3/5 lg:w-3/5 hidden rounded-md overflow-hidden">
+              <Image
+                className="rounded-md shadow-lg"
+                src={resumeJpeg}
+                alt="Dev's Image"
+              />
             </div>
-            <div className="sm:w-full w-1/3">
+            <div className="sm:w-full md:w-full lg:w-full w-1/3 md:pt-4 lg:pt-6">
               <h1 className="text-3xl text-center font-bold text-dark dark:text-light pb-6">
                 Bio
               </h1>
@@ -64,15 +68,15 @@ const about = (props: Props) => {
                 .
               </p>
             </div>
-            <div className="w-1/3 sm:hidden rounded-lg overflow-hidden shadow-xl border-[25px] border-dark dark:border-light">
+            <div className="w-1/3 sm:hidden md:hidden lg:hidden rounded-lg overflow-hidden shadow-xl border-[25px] border-dark dark:border-light">
               <Image
-                className="overflow-hidden sm:hidden"
+                className="overflow-hidden"
                 src={resumeJpeg}
                 alt="Dev's Image"
               />
             </div>
-            <div className="text-center sm:w-full sm:pt-12 w-1/3">
-              <h1 className="text-dark dark:text-light sm:text-3xl lg:text-lg text-3xl font-bold pb-6">
+            <div className="text-center sm:w-full sm:pt-12 md:pt-6 lg:pt-6 md:w-full lg:w-full w-1/3">
+              <h1 className="text-dark dark:text-light sm:text-3xl text-3xl font-bold  pb-6">
                 Production Apps
               </h1>
               <ul className="space-y-4">
@@ -81,7 +85,7 @@ const about = (props: Props) => {
                     primaryColorUnderline
                     target={"_blank"}
                     title="Liifer Web App"
-                    className="text-primary dark:text-primaryDark"
+                    className="text-primary dark:text-primaryDark sm:font-semibold md:font-semibold sm:underline md:underline"
                     href={"https://liifer.com/home"}
                   />
                 </li>
@@ -90,7 +94,7 @@ const about = (props: Props) => {
                     primaryColorUnderline
                     target={"_blank"}
                     title="Liifer Desktop/In-Game App"
-                    className="text-primary dark:text-primaryDark "
+                    className="text-primary dark:text-primaryDark sm:font-semibold md:font-semibold sm:underline md:underline"
                     href={
                       "https://www.overwolf.com/app/Liifer_Technologies_Inc-Liifer_Application"
                     }
@@ -101,7 +105,7 @@ const about = (props: Props) => {
                     primaryColorUnderline
                     target={"_blank"}
                     title=" Liifer Android App"
-                    className="text-primary dark:text-primaryDark"
+                    className="text-primary dark:text-primaryDark sm:font-semibold md:font-semibold sm:underline md:underline"
                     href={
                       "https://play.google.com/store/search?q=Liifer&c=apps&hl=en&gl=US"
                     }
@@ -112,7 +116,7 @@ const about = (props: Props) => {
                     primaryColorUnderline
                     target={"_blank"}
                     title="Liifer iOS App"
-                    className="text-primary dark:text-primaryDark"
+                    className="text-primary dark:text-primaryDark sm:font-semibold md:font-semibold sm:underline md:underline"
                     href={"https://apps.apple.com/app/liifer/id6468917016"}
                   />
                 </li>

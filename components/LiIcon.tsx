@@ -12,7 +12,7 @@ export const LiIcon: React.FC<Props> = ({ reference }) => {
   });
 
   return (
-    <figure className="absolute left-0 stroke-dark dark:stroke-light">
+    <figure className="absolute sm:hidden left-0 stroke-dark dark:stroke-light">
       <svg
         className="-rotate-90 md:w-[60px] md:h-[60px] xs:w-[40px] xs:h-[40px]"
         width="75"

@@ -4,11 +4,11 @@ type Props = {};
 
 export const Education = (props: Props) => {
   return (
-    <div className="pt-12 w-10/12 mx-auto">
-      <h2 className="font-bold text-5xl md:text-6xl xs:text-4xl mb-12 md:mb-16 w-full text-center">
+    <div className="sm:pt-10 pt-12 sm:w-full w-1/2 mx-auto">
+      <h2 className="font-bold text-5xl md:text-3xl lg:text-3xl xs:text-4xl   w-full text-center">
         Education
       </h2>
-      <div className="py-8">
+      <div className="sm:py-2 py-8">
         <h3 className="text-2xl font-bold">
           Diploma in Full-Stack Web Development, Concordia University, Montréal
         </h3>

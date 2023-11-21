@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import { LiIcon } from "./LiIcon";
 import Link from "next/link";
+import { useWindowSize } from "./hooks/useWindowSize";
 
 type DetailsProps = {
   position: string;
@@ -21,12 +22,14 @@ const Details: React.FC<DetailsProps> = ({
   work,
 }) => {
   const ref = useRef(null);
+  const size = useWindowSize();
+  console.log("this is size", size);
   return (
     <li
       ref={ref}
-      className="my-8 first:-mt-1 w-[60%] md:w-[80%] mx-auto flex flex-col items-start justify-between "
+      className="my-8 first:-mt-1 sm:w-11/12 w-[60%] md:w-[80%] lg:w-10/12 mx-auto flex flex-col items-start justify-between "
     >
-      <LiIcon reference={ref} />
+      {/* <LiIcon reference={ref} /> */}
       <motion.div
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
@@ -62,17 +65,17 @@ export const Experience = () => {
   });
 
   return (
-    <div className="mt-20">
-      <h2 className="font-bold text-5xl md:text-6xl xs:text-4xl mb-12 md:mb-16 w-full text-center">
+    <div className="mt-20 sm:mt-6 md:mt-6 lg:mt-6">
+      <h2 className="font-bold text-5xl md:text-3xl lg:text-3xl mb-12 md:mb-16 w-full text-center">
         Experience
       </h2>
 
-      <div ref={ref} className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">
-        <motion.div
+      <div ref={ref} className="w-3/4 mx-auto relative lg:w-full md:w-full">
+        {/* <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-0 w-[4px] h-full overflow-hidden bg-primary origin-top dark:bg-primaryDark drop-shadow-glow md:w-[2px] md:left-[30px] xs:left-[20px]"
-        />
-        <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
+          className="absolute left-9 top-0 w-[4px] sm:hidden h-full overflow-hidden bg-primary origin-top dark:bg-primaryDark drop-shadow-glow md:w-[2px] md:left-[30px] xs:left-[20px]"
+        /> */}
+        <ul className="w-full flex flex-col items-start justify-between">
           <Details
             work={
               "After having brough the Liifer Web App to production I moved onto working on the Overwolf extention and porting the app to Android and iOS."
@@ -101,14 +104,6 @@ export const Experience = () => {
             time="1 year"
             position={"Freelance Web Dev"}
           />
-          {/* <Details
-            work={"holder"}
-            address={"holder"}
-            time="holder"
-            companyLink={"liifer.com"}
-            company={"liifer"}
-            position={"holder"}
-          /> */}
         </ul>
       </div>
     </div>
