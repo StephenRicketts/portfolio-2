@@ -26,36 +26,34 @@ const about = (props: Props) => {
       <TransitionEffect />
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="p-16">
-          <div className="text-xl sm:text-base sm:flex-col md:flex-col lg:flex-col flex items-center justify-center space-x-2 ">
-            <div className="pb-2 sm:block md:block lg:block sm:w-4/5 md:w-3/5 lg:w-3/5 hidden rounded-md overflow-hidden">
+          <div className="w-full text-base lg:text-xl flex flex-col lg:flex-row  items-center justify-center space-x-2">
+            <div className="pb-2 w-10/12 md:w-1/2 lg:hidden rounded-md overflow-hidden">
               <Image
-                className="rounded-md shadow-lg"
+                priority
+                className="overflow-hidden rounded-md shadow-lg"
                 src={resumeJpeg}
                 alt="Dev's Image"
               />
             </div>
-            <div className="sm:w-full md:w-full lg:w-full w-1/3 md:pt-4 lg:pt-6">
-              <h1 className="text-3xl text-center font-bold text-dark dark:text-light pb-6">
+            <div className="w-full lg:w-1/3">
+              <h1 className="text-3xl text-center font-bold pt-2 lg:pt-0 text-dark dark:text-light pb-6">
                 Bio
               </h1>
-              <p className="w-11/12 mx-auto text-base pb-2">
-                I am dedicated full-stack developer (recently working mostly in
-                the front-end), with a proven experience in producing performant
-                and industry-verified web and mobile applications. I have been
-                writing TypeScript code nearly every day for the past 3 years.
-                In that time, I have implemented many features, integrating many
-                APIs, and done all the things you would expect from a lead
-                front-end developer.
+              <p className="w-full lg:w-11/12 text-base pb-2">
+                Hello! My name is Stephen Ricketts. I am dedicated full-stack
+                developer (recently working mostly in the front-end), with
+                proven experience in producing performant and industry-verified
+                web and mobile applications. I have been writing TypeScript code
+                nearly every day for the past 3 years. In that time, I have
+                implemented many features, integrating many APIs, and done all
+                the things you would expect from a lead front-end developer.
               </p>
-              <p className="w-11/12 mx-auto text-base pb-2">
+              <p className="w-full lg:w-11/12 text-base pb-2">
                 I am dedicated to learning new skills and keeping up with the
-                latest tech. I am a bootcamp graduate but that is not where my
-                learning ended, I have taken many online courses to learn new
-                skills and I continue to do so today. I am flexible and willing
-                to learn basically anything I need to, including new languages
-                and frameworks.
+                latest tech. I am flexible and willing to learn basically
+                anything I need to, including new languages and frameworks.
               </p>
-              <p className="w-11/12 mx-auto text-base">
+              <p className="w-full lg:w-11/12 text-base">
                 I am looking to expand upon my list of production apps so if you
                 have something you would like to build, please do not hesitate
                 to
@@ -68,15 +66,16 @@ const about = (props: Props) => {
                 .
               </p>
             </div>
-            <div className="w-1/3 sm:hidden md:hidden lg:hidden rounded-lg overflow-hidden shadow-xl border-[25px] border-dark dark:border-light">
+            <div className="w-1/3 hidden lg:block rounded-lg overflow-hidden shadow-xl ] border-dark dark:border-light">
               <Image
+                priority
                 className="overflow-hidden"
                 src={resumeJpeg}
                 alt="Dev's Image"
               />
             </div>
-            <div className="text-center sm:w-full sm:pt-12 md:pt-6 lg:pt-6 md:w-full lg:w-full w-1/3">
-              <h1 className="text-dark dark:text-light sm:text-3xl text-3xl font-bold  pb-6">
+            <div className="text-center w-full pt-12 lg:pt-0 lg:w-1/3">
+              <h1 className="text-dark dark:text-light text-3xl font-bold pb-6">
                 Production Apps
               </h1>
               <ul className="space-y-4">
@@ -85,7 +84,7 @@ const about = (props: Props) => {
                     primaryColorUnderline
                     target={"_blank"}
                     title="Liifer Web App"
-                    className="text-primary dark:text-primaryDark sm:font-semibold md:font-semibold sm:underline md:underline"
+                    className="text-primary dark:text-primaryDark text-lg font-semibold underline lg:no-underline"
                     href={"https://liifer.com/home"}
                   />
                 </li>
@@ -94,7 +93,7 @@ const about = (props: Props) => {
                     primaryColorUnderline
                     target={"_blank"}
                     title="Liifer Desktop/In-Game App"
-                    className="text-primary dark:text-primaryDark sm:font-semibold md:font-semibold sm:underline md:underline"
+                    className="text-primary dark:text-primaryDark text-lg font-semibold underline lg:no-underline"
                     href={
                       "https://www.overwolf.com/app/Liifer_Technologies_Inc-Liifer_Application"
                     }
@@ -105,7 +104,7 @@ const about = (props: Props) => {
                     primaryColorUnderline
                     target={"_blank"}
                     title=" Liifer Android App"
-                    className="text-primary dark:text-primaryDark sm:font-semibold md:font-semibold sm:underline md:underline"
+                    className="text-primary dark:text-primaryDark text-lg font-semibold underline lg:no-underline"
                     href={
                       "https://play.google.com/store/search?q=Liifer&c=apps&hl=en&gl=US"
                     }
@@ -116,7 +115,7 @@ const about = (props: Props) => {
                     primaryColorUnderline
                     target={"_blank"}
                     title="Liifer iOS App"
-                    className="text-primary dark:text-primaryDark sm:font-semibold md:font-semibold sm:underline md:underline"
+                    className="text-primary dark:text-primaryDark text-lg font-semibold underline lg:no-underline"
                     href={"https://apps.apple.com/app/liifer/id6468917016"}
                   />
                 </li>
@@ -126,10 +125,8 @@ const about = (props: Props) => {
           <div>
             <Skills />
           </div>
+          <Experience />
           <Education />
-          <div className="pt-6 pb-[83px]">
-            <Experience />
-          </div>
         </Layout>
       </main>
       <Footer />

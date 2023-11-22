@@ -22,12 +22,11 @@ const Details: React.FC<DetailsProps> = ({
   work,
 }) => {
   const ref = useRef(null);
-  const size = useWindowSize();
-  console.log("this is size", size);
+
   return (
     <li
       ref={ref}
-      className="my-8 first:-mt-1 sm:w-11/12 w-[60%] md:w-[80%] lg:w-10/12 mx-auto flex flex-col items-start justify-between "
+      className="my-8 first:-mt-1 w-full lg:w-[60%] md:w-[80%] mx-auto flex flex-col items-start justify-between "
     >
       {/* <LiIcon reference={ref} /> */}
       <motion.div
@@ -65,12 +64,12 @@ export const Experience = () => {
   });
 
   return (
-    <div className="mt-20 sm:mt-6 md:mt-6 lg:mt-6">
-      <h2 className="font-bold text-5xl md:text-3xl lg:text-3xl mb-12 md:mb-16 w-full text-center">
+    <div className="mt-6">
+      <h2 className="font-bold text-3xl mb-10 md:mb-16 w-full text-center">
         Experience
       </h2>
 
-      <div ref={ref} className="w-3/4 mx-auto relative lg:w-full md:w-full">
+      <div ref={ref} className=" mx-auto relative w-full lg:w-3/4">
         {/* <motion.div
           style={{ scaleY: scrollYProgress }}
           className="absolute left-9 top-0 w-[4px] sm:hidden h-full overflow-hidden bg-primary origin-top dark:bg-primaryDark drop-shadow-glow md:w-[2px] md:left-[30px] xs:left-[20px]"

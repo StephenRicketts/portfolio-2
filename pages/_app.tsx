@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className={`${monsterrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen`}
+        className={`${monsterrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen overflow-x-hidden`}
       >
         <NavBar />
         <AnimatePresence mode="wait">

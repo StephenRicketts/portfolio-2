@@ -42,10 +42,10 @@ export const Skills = () => {
   ];
   return (
     <>
-      <h2 className="font-bold text-5xl lg:text-3xl md:text-3xl sm:mt-10 lg:pb-6 mt-12 mb-2 w-full text-center">
+      <h2 className="font-bold text-3xl lg:text-3xl md:text-3xl pb-6 mt-12 mb-2 w-full text-center">
         Skills
       </h2>
-      <div className="sm:flex md:flex lg:flex lg:w-3/4 flex-wrap hidden mx-auto">
+      <div className="flex  lg:w-3/4 flex-wrap lg:hidden mx-auto">
         {skillList.map((skill: string) => {
           return (
             <div
@@ -60,8 +60,8 @@ export const Skills = () => {
       </div>
 
       <div
-        className="w-full h-screen sm:hidden md:hidden lg:hidden relative flex items-center justify-center rounded-full  
-      bg-circularLight dark:bg-circularDark lg:bg-circularLightLg lg:dark:bg-circularDarkLg md:bg-circularLightMd md:dark:bg-circularDarkMd sm:bg-circularLightSm sm:dark:bg-circularDarkSm"
+        className="w-full lg:w-4/5 mx-auto h-screen hidden relative lg:flex items-center justify-center rounded-full  
+    lg:bg-circularLightLg lg:dark:bg-circularDarkLg md:bg-circularLightMd md:dark:bg-circularDarkMd bg-circularLightSm dark:bg-circularDarkSm"
       >
         <Skill name="HTML" x="-20vw" y="2vw" />
         <Skill name="CSS" x="-5vw" y="-10vw" />

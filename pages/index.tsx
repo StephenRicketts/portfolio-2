@@ -17,21 +17,21 @@ const Home: NextPage = () => {
           <title>Stephen Ricketts, Full Stack Developer</title>
         </Head>
         <TransitionEffect />
-        <main className=" dark:text-light">
+        <main className="dark:text-light ">
           <Layout className="flex md:!pt-16 sm:!pt-8">
-            <div className="w-1/2 ">
+            <div className="w-1/2">
               <OrbScene />
             </div>
             <div className="p-16 w-1/2 text-left">
               <AnimatedText
                 text="Architect"
-                className="!text-6xl xl:!text-5xl lg:!text-6xl md:!text-5xl sm:!text-3xl !text-left !text-primary dark:!text-primaryDark"
+                className=" !text-left !text-primary dark:!text-primaryDark"
               />
               <AnimatedText
                 text="of the Internet"
-                className="!text-5xl xl:!text-4xl lg:!text-5xl md:!text-4xl sm:!text-2xl !text-left !text-primary dark:!text-primaryDark -mt-2"
+                className="lg:text-4xl !text-left !text-primary dark:!text-primaryDark"
               />
-              <p className="py-4 font-medium text-2xl md:text-sm sm:text-xs">
+              <p className="py-4 font-medium lg:text-2xl md:text-sm text-xs">
                 A full-stack developer and start-up vet. Experienced in web and
                 mobile development. Putting complicating things together since
                 2019.

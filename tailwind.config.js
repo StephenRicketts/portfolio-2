@@ -14,10 +14,10 @@ module.exports = {
         mont: ["var(--font-mont)", ...fontFamily.sans],
       },
       colors: {
-        dark: "#082f49",
-        light: "#f0f9ff",
-        primary: "#4AAFD5",
-        primaryDark: "#FFFF33",
+        dark: "#1e1b4b",
+        light: "#eef2ff",
+        primary: "#eab308",
+        primaryDark: "#5eead4",
       },
       dropShadow: {
         glow: [
@@ -53,15 +53,6 @@ module.exports = {
         circularDarkSm:
           "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#082f49 4px,#082f49 40px)",
       },
-    },
-    screens: {
-      "3xl": { max: "3500px" },
-      "2xl": { max: "1535px" },
-      xl: { max: "1279px" },
-      lg: { max: "1023px" },
-      md: { max: "767px" },
-      sm: { max: "639px" },
-      xs: { max: "479px" },
     },
   },
   plugins: [],
