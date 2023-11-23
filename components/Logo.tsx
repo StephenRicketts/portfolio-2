@@ -1,22 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import portGif from "../public/images/portal.gif";
+import Image from "next/image";
 
-type Props = {};
-
-const MotionLink = motion(Link);
-
-export const Logo = (props: Props) => {
+export const Logo = () => {
   return (
-    <MotionLink
-      className="w-16 h-16 bg-dark text-light flex items-center justify-center rounded-full text-2xl font-bold border border-solid border-transparent dark:border-light"
-      whileHover={{
-        backgroundColor: ["#1828b3", "#102934", "#481283"],
-        transition: { duration: 1, repeat: Infinity },
-      }}
-      href="/"
-    >
-      SR
-    </MotionLink>
+    <Link href="/">
+      <div className="w-16 h-16 hover:opacity-0 transition-opacity shadow-lg bg-primary dark:bg-primaryDark ease-in-out duration-300 dark:text-dark  text-light flex items-center justify-center rounded-full text-2xl font-bold">
+        <div className="dark:bg-primaryDarkDim bg-amber-500  absolute h-[103%] w-[106%] -z-10 rounded-full -right-1 " />
+        <span className="">SR</span>
+      </div>
+      <div className="h-[72px] w-[72px] -ml-1 -mt-1 absolute rounded-full bg-dark shadow-lg hover:opacity-100 opacity-0 top-0 transition ease-in-out duration-500">
+        <Image className="animate-spin-slow" src={portGif} alt="portal" />
+      </div>
+    </Link>
   );
 };

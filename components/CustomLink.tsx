@@ -18,21 +18,24 @@ export const CustomLink: React.FC<Props> = ({
   target,
 }) => {
   const router = useRouter();
+  const isCurrentPath = router.asPath === href;
 
   return (
     <Link
       target={!!target ? target : undefined}
       href={href}
-      className={`${className} relative group`}
+      className={`${className} relative group ${
+        isCurrentPath ? "text-primary dark:text-primaryDark" : ""
+      }`}
     >
       {title}
       <span
         className={`h-[1px] inline-block ${
-          primaryColorUnderline
+          primaryColorUnderline || isCurrentPath
             ? "bg-primary dark:bg-primaryDark"
             : "bg-dark dark:bg-light"
         }  absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${
-          router.asPath === href ? "w-full" : "w-0"
+          isCurrentPath ? "w-full" : "w-0"
         } `}
       >
         &nbsp;

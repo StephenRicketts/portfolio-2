@@ -1,10 +1,9 @@
-import Link from "next/link";
 import React from "react";
 import { TextLink } from "./TextLink";
 
 export const CapacitorText = () => {
   return (
-    <div className="flex flex-col space-y-4 pr-10 sm:text-sm">
+    <div className="flex flex-col space-y-4 pr-10 text-sm lg:text-base">
       <p className="">
         Through leveraging
         <TextLink padding="px-1" href={"https://capacitorjs.com/"}>
@@ -40,7 +39,7 @@ export const CapacitorText = () => {
 
 export const ApiCommunicationText = () => {
   return (
-    <div className="w-11/12 space-y-2 sm:text-sm">
+    <div className="w-11/12 space-y-2 text-sm lg:text-base">
       <p>
         The Liifer app is a food delivery app with that allows users to create
         meals and save them to allow for quick ordering. A great user experience
@@ -67,7 +66,7 @@ export const ApiCommunicationText = () => {
 };
 export const AuthText = () => {
   return (
-    <div className="space-y-2 sm:text-sm">
+    <div className="space-y-2 text-sm lg:text-base">
       <p>
         For authorization, Liifer uses
         <TextLink padding="pl-1" href={"https://auth0.com/docs"}>
@@ -90,7 +89,7 @@ export const AuthText = () => {
 
 export const OverwolfText = () => {
   return (
-    <div className="space-y-2 sm:text-sm">
+    <div className="space-y-2 text-sm lg:text-base">
       <p>
         Through the
         <TextLink href={"https://overwolf.github.io/api"} padding="pl-1">
@@ -125,7 +124,7 @@ export const OverwolfText = () => {
 
 export const BackEndText = () => {
   return (
-    <div className="sm:text-sm">
+    <div className="text-sm lg:text-base">
       <p>
         The back-end of the Liifer app leverages a third party aggregator system
         to access over 800,000 restaurants all over North America. The results

@@ -17,21 +17,33 @@ const Home: NextPage = () => {
           <title>Stephen Ricketts, Full Stack Developer</title>
         </Head>
         <TransitionEffect />
-        <main className="dark:text-light ">
-          <Layout className="flex md:!pt-16 sm:!pt-8">
-            <div className="w-1/2">
-              <OrbScene />
-            </div>
-            <div className="p-16 w-1/2 text-left">
+        <main className="dark:text-light pt-6 min-h-screen pb-24 md:pb-0">
+          <Layout className="flex flex-col items-center lg:flex-row md:!pt-16">
+            <div className="lg:hidden text-center pb-2">
               <AnimatedText
                 text="Architect"
-                className=" !text-left !text-primary dark:!text-primaryDark"
+                className="!text-primary dark:!text-primaryDark !text-4xl"
               />
               <AnimatedText
                 text="of the Internet"
-                className="lg:text-4xl !text-left !text-primary dark:!text-primaryDark"
+                className="!text-4xl  !text-primary dark:!text-primaryDark"
               />
-              <p className="py-4 font-medium lg:text-2xl md:text-sm text-xs">
+            </div>
+            <div className="w-full lg:w-1/2">
+              <OrbScene />
+            </div>
+            <div className="lg:p-16 w-full lg:w-1/2 text-left">
+              <div className="hidden lg:block">
+                <AnimatedText
+                  text="Architect"
+                  className=" !text-left !text-primary dark:!text-primaryDark"
+                />
+                <AnimatedText
+                  text="of the Internet"
+                  className="lg:text-4xl !text-left !text-primary dark:!text-primaryDark"
+                />
+              </div>
+              <p className="py-4 font-medium lg:text-2xl text-base ">
                 A full-stack developer and start-up vet. Experienced in web and
                 mobile development. Putting complicating things together since
                 2019.
@@ -57,9 +69,9 @@ const Home: NextPage = () => {
               </div>
             </div>
           </Layout>
-          <Footer />
         </main>
       </div>
+      <Footer />
     </>
   );
 };

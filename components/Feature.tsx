@@ -21,22 +21,22 @@ export const Feature: React.FC<FeatureProps> = ({
 }) => {
   return (
     <article
-      className={`w-full flex sm:flex-col-reverse
-      items-center justify-between relative 
-    rounded-3xl border border-solid border-dark dark:border-light bg-light shadow-2xl p-12 dark:bg-dark 
-    lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4`}
+      className={`w-full flex flex-col lg:flex-row items-center justify-between relative 
+    lg:rounded-3xl shadow-3xl xl:p-8
+    p-4 lg:p-8 rounded-2xl rounded-br-3xl border-indigo-700 bg-indigo-200 dark:bg-indigo-900`}
     >
-      <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
-        <h2 className="my-2 md:w-5/6 text-left text-4xl font-bold text-primary dark:text-primaryDark sm:text-lg">
+      <div className="w-full lg:w-1/2 flex flex-col items-start justify-between lg:pr-6">
+        <h2 className="my-2 md:w-5/6 text-left text-2xl lg:text-4xl font-bold text-primary dark:text-primaryDark ">
           {title}
         </h2>
+
         {!!CustomTextBlock && <CustomTextBlock />}
       </div>
       <div
-        className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light 
-      rounded-br-3xl xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]"
+        className="absolute top-0 lg:-right-4 -z-10 w-[101%] lg:h-[102%] lg:rounded-[2.5rem] bg-indigo-500 dark:bg-indigo-700
+      lg:rounded-br-3xl -right-2 h-[102%] rounded-[1.5rem]"
       />
-      <div className="w-1/2 cursor-pointer max-h-[475px] overflow-hidden rounded-lg lg:w-full">
+      <div className="w-full lg:w-1/2 cursor-pointer max-h-[450px] pt-4 lg:pt-0 overflow-hidden rounded-lg">
         {!customImageBlock && !!img && (
           <FramerImage
             src={img}

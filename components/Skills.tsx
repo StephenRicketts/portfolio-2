@@ -13,8 +13,8 @@ const Skill: React.FC<SkillProps> = ({ name, x, y }) => {
         initial={{ x: 0, y: 0 }}
         whileInView={{ x: x, y: y, transition: { duration: 1.5 } }}
         viewport={{ once: true }}
-        className="flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 
-        shadow-dark cursor-pointer absolute dark:text-dark dark:bg-light lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3 xs:bg-transparent xs:dark:bg-transparent
+        className="flex items-center justify-center rounded-full font-semibold bg-dark text-light
+        shadow-dark cursor-pointer absolute dark:text-dark dark:bg-primaryDark lg:py-3 lg:px-6 md:text-sm md:py-1.5 md:px-3 xs:bg-transparent xs:dark:bg-transparent
         xs:text-dark xs:dark:text-light xs:font-bold"
       >
         {name}

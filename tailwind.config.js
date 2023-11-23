@@ -16,14 +16,12 @@ module.exports = {
       colors: {
         dark: "#1e1b4b",
         light: "#eef2ff",
-        primary: "#eab308",
-        primaryDark: "#5eead4",
+        primary: "#f59e0b",
+        primaryDark: "#bef264",
+        primaryDarkDim: "#84cc16",
       },
-      dropShadow: {
-        glow: [
-          "0 0px 20px rgba(255,255, 255, 0.35)",
-          "0 0px 65px rgba(255, 255,255, 0.2)",
-        ],
+      screens: {
+        "3xl": "1850px",
       },
       animation: {
         "spin-slow": "spin 3s linear infinite",
@@ -33,25 +31,25 @@ module.exports = {
           "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f0f9ff 5px,#f0f9ff 100px)",
 
         circularDark:
-          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#082f49 8px,#082f49 100px)",
+          "repeating-radial-gradient(#818cf8 2px,#312e81 8px,#1e1b4b 100px)",
 
         circularLightLg:
-          "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,##f0f9ff 5px,##f0f9ff 80px)",
+          "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f0f9ff 5px,##f0f9ff 80px)",
 
         circularDarkLg:
-          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#082f49 8px,#082f49 80px)",
+          "repeating-radial-gradient(#818cf8 2px,#312e81 8px,#1e1b4b 80px)",
 
         circularLightMd:
-          "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,##f0f9ff 5px,#f0f9ff 60px)",
+          "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,##f0f9ff 5px,#1e1b4b 60px)",
 
         circularDarkMd:
-          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#082f49 6px,#082f49 60px)",
+          "repeating-radial-gradient(#818cf8 2px,#1e1b4b 6px,#312e81 60px)",
 
         circularLightSm:
           "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f0f9ff 5px,#f0f9ff 40px)",
 
         circularDarkSm:
-          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#082f49 4px,#082f49 40px)",
+          "repeating-radial-gradient(#818cf8 2px,#312e81 4px,#1e1b4b 40px)",
       },
     },
   },

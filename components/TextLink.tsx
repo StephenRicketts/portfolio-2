@@ -14,7 +14,7 @@ export const TextLink: React.FC<TextLinkProps> = ({
 }) => {
   return (
     <Link
-      className={`dark:text-primaryDark text-primary underline hover:text-yellow-100 ${padding}`}
+      className={`dark:text-primaryDark text-primary font-semibold underline hover:text-yellow-100 ${padding}`}
       target="_blank"
       href={href}
     >
