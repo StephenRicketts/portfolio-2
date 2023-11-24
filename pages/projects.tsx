@@ -4,7 +4,7 @@ import { Layout } from "../components/Layout";
 import Image from "next/image";
 import liiferAuthPng from "../public/images/liiferAuth.png";
 import liiferRestListPng from "../public/images/liiferRestList.png";
-import liiferIosPng from "../public/images/liiferiOS.png";
+import liiferIosPng from "../public/images/liiferIOS.png";
 import liiferAndroidPng from "../public/images/liiferAndroid.png";
 import liiferMenuPng from "../public/images/liiferMenu.png";
 import overwolfPng from "../public/images/overwolf.png";
