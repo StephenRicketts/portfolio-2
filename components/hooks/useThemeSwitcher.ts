@@ -28,8 +28,6 @@ const preferDarkQuery = "(prefer-color-scheme: dark)";
       }
     }
 
-    handleChange()
-
     mediaQuery.addEventListener("change", handleChange);
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
