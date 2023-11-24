@@ -38,13 +38,29 @@ const projects = () => {
         <Layout className="pt-16">
           <div className="w-full text-base sm:py-4 lg:text-lg mx-auto pb-4">
             <p>
-              For the last 2.5 years I have been employed full time by
+              Aside from this
+              <TextLink
+                padding="px-1"
+                href="https://github.com/StephenRicketts/portfolio-2"
+              >
+                portfolio website
+              </TextLink>
+              (built using Next.js, TypeScript, and Tailwind CSS), my recent
+              work has all been for
               <TextLink padding="px-1" href={"https://liifer.com/home"}>
                 Liifer
               </TextLink>
-              to develop and maintain their apps. In this section I briefly
-              discuss some of these features and some of the libraries/tech used
-              in development.
+              technologies to develop and maintain their apps. In this section I
+              briefly discuss some of these features and some of the
+              libraries/tech used in development. If you have any questions
+              about my recent experience please
+              <TextLink
+                href="mailto:stephen.ricketts.dev@gmail.com"
+                padding="pl-1"
+              >
+                email me
+              </TextLink>
+              .
             </p>
           </div>
           <div className="grid grid-cols-12 gap-y-8 xl:gap-y-24 xl:gap-x-16  md:gap-y-24 ">

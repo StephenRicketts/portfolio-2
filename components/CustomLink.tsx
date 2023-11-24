@@ -25,7 +25,7 @@ export const CustomLink: React.FC<Props> = ({
       target={!!target ? target : undefined}
       href={href}
       className={`${className} relative group ${
-        isCurrentPath ? "text-primary dark:text-primaryDark" : ""
+        isCurrentPath ? "text-primary dark:text-primaryDark font-semibold" : ""
       }`}
     >
       {title}

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Logo } from "./Logo";
 import { CustomLink } from "./CustomLink";
 import { GithubIcon, LinkedInIcon } from "./Icons";
-import { SunIcon, MoonIcon } from "./SunAnMoonIcons";
+import { SunDim, Moon } from "phosphor-react";
 import { motion } from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 import { CustomMobileLink } from "./CustomMobileLink";
@@ -19,7 +19,7 @@ export const NavBar = (props: Props) => {
   };
 
   return (
-    <header className="w-full py-8 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 px-8">
+    <header className="w-full z-20 py-8 font-medium flex items-center justify-between dark:text-light relative  lg:px-16 md:px-12 px-8">
       <button
         onClick={handleClick}
         className="flex-col flex lg:hidden justify-center items-center"
@@ -74,11 +74,7 @@ export const NavBar = (props: Props) => {
             className={`ml-3 flex items-center justify-center rounded-full p-1 
           ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}
           >
-            {mode === "dark" ? (
-              <SunIcon className={"fill-dark"} />
-            ) : (
-              <MoonIcon className={"fill-dark"} />
-            )}
+            {mode === "dark" ? <SunDim /> : <Moon />}
           </button>
         </nav>
       </div>
@@ -140,11 +136,7 @@ export const NavBar = (props: Props) => {
               className={`ml-3 flex items-center justify-center rounded-full p-1 
           ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}
             >
-              {mode === "dark" ? (
-                <SunIcon className={"fill-dark"} />
-              ) : (
-                <MoonIcon className={"fill-dark"} />
-              )}
+              {mode === "dark" ? <SunDim /> : <Moon />}
             </button>
           </nav>
         </motion.div>

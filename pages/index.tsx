@@ -17,7 +17,7 @@ const Home: NextPage = () => {
           <title>Stephen Ricketts, Full Stack Developer</title>
         </Head>
         <TransitionEffect />
-        <main className="dark:text-light pt-6 min-h-screen pb-24 md:pb-0">
+        <main className="dark:text-light pt-6 min-h-screen pb-24 md:pb-0 text-center">
           <Layout className="flex flex-col items-center lg:flex-row md:!pt-16">
             <div className="lg:hidden text-center pb-2">
               <AnimatedText
@@ -43,29 +43,29 @@ const Home: NextPage = () => {
                   className="lg:text-4xl !text-left !text-primary dark:!text-primaryDark"
                 />
               </div>
-              <p className="py-4 font-medium lg:text-2xl text-base ">
-                A full-stack developer and start-up vet. Experienced in web and
-                mobile development. Putting complicating things together since
-                2019.
-              </p>
-              <div className="flex items-center pt-8">
-                <Link
-                  className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold 
-                    hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark 
-                    dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:px-4 md:text-base"
-                  href="/resume.pdf"
-                  target={"_blank"}
-                  download={true}
-                >
-                  Resume <OutsideLinkIcon className="w-6 ml-1" />
-                </Link>
-                <Link
-                  href="mailto:stephen.ricketts.dev@gmail.com"
-                  target={"_blank"}
-                  className="ml-4 text-lg font-medium capaitalize text-dark underline dark:text-light md:text-base"
-                >
-                  Contact
-                </Link>
+              <div className="flex flex-col items-center lg:items-start">
+                <p className="py-4 font-medium lg:text-2xl text-base text-center">
+                  A full-stack developer and start-up vet. Experienced in web
+                  and mobile development. Putting complicating things together
+                  since 2019.
+                </p>
+                <div className="flex items-center pt-8 ">
+                  <div className="h-[54px] w-[132px] dark:bg-primaryDarkDim bg-primaryDim absolute z-0 -mb-1 rounded-lg rounded-l-xl rounded-r-lg" />
+                  <Link
+                    className="z-10 h-[52px] w-[129px] flex items-center bg-primary text-light p-2.5 px-6 rounded-lg text-lg font-semibold 
+                    hover:bg-primaryDim dark:bg-primaryDark dark:text-dark hover:dark:bg-primaryDarkDim  md:px-4 md:text-base shadow-2xl"
+                    href="/resume.pdf"
+                    target={"_blank"}
+                  >
+                    Resume <OutsideLinkIcon className="w-6 ml-1" />
+                  </Link>
+                  <Link
+                    href="mailto:stephen.ricketts.dev@gmail.com"
+                    className="ml-4 text-lg font-medium capaitalize text-dark underline dark:text-light md:text-base"
+                  >
+                    Contact
+                  </Link>
+                </div>
               </div>
             </div>
           </Layout>

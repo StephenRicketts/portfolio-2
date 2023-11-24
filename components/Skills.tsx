@@ -13,9 +13,9 @@ const Skill: React.FC<SkillProps> = ({ name, x, y }) => {
         initial={{ x: 0, y: 0 }}
         whileInView={{ x: x, y: y, transition: { duration: 1.5 } }}
         viewport={{ once: true }}
-        className="flex items-center justify-center rounded-full font-semibold bg-dark text-light
-        shadow-dark cursor-pointer absolute dark:text-dark dark:bg-primaryDark lg:py-3 lg:px-6 md:text-sm md:py-1.5 md:px-3 xs:bg-transparent xs:dark:bg-transparent
-        xs:text-dark xs:dark:text-light xs:font-bold"
+        className="flex items-center justify-center rounded-full font-semibold bg-primary text-light
+        shadow-dark cursor-pointer absolute dark:text-dark dark:bg-primaryDark py-3 px-6 
+        xs:text-dark xs:dark:text-light xs:font-bold shadow-md"
       >
         {name}
       </motion.div>
@@ -45,22 +45,21 @@ export const Skills = () => {
       <h2 className="font-bold text-3xl lg:text-3xl md:text-3xl pb-6 mt-12 mb-2 w-full text-center">
         Skills
       </h2>
-      <div className="flex  lg:w-3/4 flex-wrap lg:hidden mx-auto">
+      <div className="flex lg:w-3/4 flex-wrap 2xl:hidden mx-auto">
         {skillList.map((skill: string) => {
           return (
             <div
               key={skill}
-              className="flex items-center justify-center bg-dark rounded-md px-4 py-4 font-semibold h-10 text-light mb-2 mr-1 shadow-lg"
-              style={{}}
+              className="flex items-center justify-center bg-primary dark:bg-primaryDark rounded-md px-4 font-semibold h-10 text-light dark:text-dark mb-2 mr-2 shadow-lg"
             >
-              {skill}
+              <span>{skill}</span>
             </div>
           );
         })}
       </div>
 
       <div
-        className="w-full lg:w-4/5 mx-auto h-screen hidden relative lg:flex items-center justify-center rounded-full  
+        className="w-4/5 mx-auto h-screen hidden relative 2xl:flex items-center justify-center rounded-full  
     lg:bg-circularLightLg lg:dark:bg-circularDarkLg md:bg-circularLightMd md:dark:bg-circularDarkMd bg-circularLightSm dark:bg-circularDarkSm"
       >
         <Skill name="HTML" x="-20vw" y="2vw" />

@@ -16,7 +16,8 @@ module.exports = {
       colors: {
         dark: "#1e1b4b",
         light: "#eef2ff",
-        primary: "#f59e0b",
+        primary: "#06b6d4",
+        primaryDim: "#0891b2",
         primaryDark: "#bef264",
         primaryDarkDim: "#84cc16",
       },
@@ -28,25 +29,25 @@ module.exports = {
       },
       backgroundImage: {
         circularLight:
-          "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f0f9ff 5px,#f0f9ff 100px)",
+          "repeating-radial-gradient(#eef2ff 2px,#eef2ff 5px,#a5f3fc 100px)",
 
         circularDark:
           "repeating-radial-gradient(#818cf8 2px,#312e81 8px,#1e1b4b 100px)",
 
         circularLightLg:
-          "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f0f9ff 5px,##f0f9ff 80px)",
+          "repeating-radial-gradient(#eef2ff 2px,#eef2ff 5px,#a5f3fc 80px)",
 
         circularDarkLg:
           "repeating-radial-gradient(#818cf8 2px,#312e81 8px,#1e1b4b 80px)",
 
         circularLightMd:
-          "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,##f0f9ff 5px,#1e1b4b 60px)",
+          "repeating-radial-gradient(#eef2ff 2px,##eef2ff 5px,#a5f3fc 60px)",
 
         circularDarkMd:
           "repeating-radial-gradient(#818cf8 2px,#1e1b4b 6px,#312e81 60px)",
 
         circularLightSm:
-          "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f0f9ff 5px,#f0f9ff 40px)",
+          "repeating-radial-gradient(#eef2ff 2px,#eef2ff 5px,#a5f3fc 40px)",
 
         circularDarkSm:
           "repeating-radial-gradient(#818cf8 2px,#312e81 4px,#1e1b4b 40px)",
