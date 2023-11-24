@@ -1,16 +1,14 @@
 import Head from "next/head";
-import React, { ReactElement } from "react";
+import React from "react";
 import { Layout } from "../components/Layout";
-import { AnimatedText } from "../components/AnimatedText";
-import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
-import { authText, restListText } from "../public/texts/featureText";
+import Image from "next/image";
 import liiferAuthPng from "../public/images/liiferAuth.png";
 import liiferRestListPng from "../public/images/liiferRestList.png";
 import liiferIosPng from "../public/images/liiferiOS.png";
 import liiferAndroidPng from "../public/images/liiferAndroid.png";
 import liiferMenuPng from "../public/images/liiferMenu.png";
 import overwolfPng from "../public/images/overwolf.png";
+import localizationPng from "../public/images/localization.png";
 import { motion } from "framer-motion";
 import { TransitionEffect } from "../components/TransitionEffect";
 import {
@@ -19,6 +17,7 @@ import {
   AuthText,
   OverwolfText,
   BackEndText,
+  LocalizationText,
 } from "../components/FeatureTexts";
 import { Feature } from "../components/Feature";
 import { Footer } from "../components/Footer";
@@ -36,7 +35,7 @@ const projects = () => {
       <TransitionEffect />
       <main className="w-full mb-20 flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
-          <div className="w-full text-base sm:py-4 lg:text-lg mx-auto pb-4">
+          <div className="w-full text-base py-4 md:text-lg mx-auto pb-4">
             <p>
               Aside from this
               <TextLink
@@ -57,6 +56,7 @@ const projects = () => {
               <TextLink
                 href="mailto:stephen.ricketts.dev@gmail.com"
                 padding="pl-1"
+                noTarget
               >
                 email me
               </TextLink>
@@ -81,6 +81,13 @@ const projects = () => {
             </div>
             <div className="col-span-12 gap-y-12">
               <Feature
+                title="Localization"
+                CustomTextBlock={LocalizationText}
+                img={localizationPng}
+              />
+            </div>
+            <div className="col-span-12 gap-y-12">
+              <Feature
                 title="An Extensive Back-End"
                 CustomTextBlock={BackEndText}
                 img={liiferRestListPng}
@@ -99,6 +106,8 @@ const projects = () => {
                         className="w-full h-[250px] lg:h-[400px]  rounded-lg overflow-hidden shadow-lg"
                         src={liiferIosPng}
                         alt="Liifer iOS app"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.2 }}
                       />
                     </div>
                     <div>
@@ -106,6 +115,8 @@ const projects = () => {
                         className="w-full h-[250px] lg:h-[400px] object-fit rounded-lg overflow-hidden shadow-lg"
                         src={liiferAndroidPng}
                         alt="Liifer Android app"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.2 }}
                       />
                     </div>
                   </div>

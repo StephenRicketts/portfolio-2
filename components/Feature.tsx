@@ -15,7 +15,6 @@ const FramerImage = motion(Image);
 export const Feature: React.FC<FeatureProps> = ({
   title,
   img,
-  reverseSides,
   customImageBlock,
   CustomTextBlock,
 }) => {
@@ -25,17 +24,17 @@ export const Feature: React.FC<FeatureProps> = ({
     lg:rounded-3xl xl:p-8 p-3 lg:p-8 rounded-2xl rounded-br-3xl border-indigo-700 bg-indigo-200 dark:bg-indigo-900`}
     >
       <div className="w-full lg:w-1/2 flex flex-col items-start justify-between lg:pr-6 ">
-        <h2 className="my-2 md:w-5/6 text-left text-2xl lg:text-4xl font-bold text-primary dark:text-primaryDark ">
+        <h2 className="my-2 xl:w-5/6 text-left text-2xl lg:text-4xl font-bold text-primary dark:text-primaryDark ">
           {title}
         </h2>
 
         {!!CustomTextBlock && <CustomTextBlock />}
       </div>
       <div
-        className="absolute top-0 lg:-right-4 -z-10 w-[101%] lg:h-[102%] lg:rounded-[2.5rem] bg-indigo-500 dark:bg-indigo-700
+        className="absolute top-0 lg:-right-3 2xl:-right-4 3xl:-right-5 -z-10 w-[101%] lg:h-[102%] lg:rounded-[2.5rem] bg-indigo-500 dark:bg-indigo-700
       lg:rounded-br-3xl -right-2 h-[102%] rounded-[1.5rem] shadow-xl"
       />
-      <div className="w-full lg:w-1/2 cursor-pointer max-h-[450px] pt-4 lg:pt-0 overflow-hidden rounded-lg">
+      <div className="w-full lg:w-1/2 max-h-[430px] pt-4 lg:pt-0 overflow-hidden rounded-lg">
         {!customImageBlock && !!img && (
           <FramerImage
             src={img}

@@ -26,13 +26,29 @@ export const CapacitorText = () => {
           </TextLink>
           and
           <TextLink
-            padding="px-1"
+            padding="pl-1"
             href={"https://apps.apple.com/app/liifer/id6468917016"}
           >
             Apple App Store
           </TextLink>
+          .
         </p>
       </div>
+    </div>
+  );
+};
+
+export const LocalizationText = () => {
+  return (
+    <div className="w-11/12 space-y-2 text-sm lg:text-base">
+      <p>
+        As Liifer is geared towards all of North America including Quebec, I
+        used
+        <TextLink padding="px-1" href="https://react.i18next.com/">
+          react-i18next
+        </TextLink>
+        to allow localization and language selection.
+      </p>
     </div>
   );
 };
@@ -41,8 +57,8 @@ export const ApiCommunicationText = () => {
   return (
     <div className="w-11/12 space-y-2 text-sm lg:text-base">
       <p>
-        The Liifer app is a food delivery app with that allows users to create
-        meals and save them to allow for quick ordering. A great user experience
+        The Liifer app is a food delivery app that allows users to create meals
+        and save them to allow for quick ordering. A great user experience
         requires the data to be fetched and displayed in a reliable and
         performant manner.
       </p>
@@ -69,12 +85,10 @@ export const AuthText = () => {
     <div className="space-y-2 text-sm lg:text-base">
       <p>
         For authorization, Liifer uses
-        <TextLink padding="pl-1" href={"https://auth0.com/docs"}>
+        <TextLink padding="pl-1" href={"https://oauth.net/"}>
           0Auth 2.0
         </TextLink>
-        , this requires handling of the associated JWT token. Storing the token,
-        using it for secure API calls, and refreshing the token when necessary.
-        Google and Discord buttons are also available for easy log in/sign up.
+        . Google and Discord buttons are also available for easy log in/sign up.
       </p>
       <p>
         Forms and client-side validation are implemented using
@@ -95,16 +109,15 @@ export const OverwolfText = () => {
         <TextLink href={"https://overwolf.github.io/api"} padding="pl-1">
           Overwolf API
         </TextLink>
-        , Liifer is also available as an desktop app and ingame overlay that
-        allows users to order food while gaming. The quality React code allows
-        this functionality with no effect on the running game.
+        , Liifer is also available as a desktop app and in-game overlay that
+        allows users to order food while gaming.
       </p>
       <p>
-        An interesting feature is the game-tracking function, which allows the
-        app to track when users are gaming, and rewards them with points for
-        time spent gaming. The in-game notifications is another, which allows
-        the back-end to send notifications to users while they are gaming, which
-        are then shown as a non-intrusive overlay.
+        An interesting feature of this extension is the game-tracking function,
+        which allows the app to track when users are gaming, and rewards them
+        with points for time spent gaming. The in-game notifications is another,
+        which allows the back-end to send notifications to users while they are
+        gaming, which are then shown as a non-intrusive overlay.
       </p>
       <p>
         This app is available in the
@@ -116,7 +129,7 @@ export const OverwolfText = () => {
         >
           Overwolf Store
         </TextLink>
-        and currently has almost 5k downloads and maintains a 4.5/5 rating.
+        and currently has around 5k downloads and maintains a 4.5/5 rating.
       </p>
     </div>
   );

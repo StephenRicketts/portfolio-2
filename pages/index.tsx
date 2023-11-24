@@ -17,8 +17,8 @@ const Home: NextPage = () => {
           <title>Stephen Ricketts, Full Stack Developer</title>
         </Head>
         <TransitionEffect />
-        <main className="dark:text-light pt-6 min-h-screen pb-24 md:pb-0 text-center">
-          <Layout className="flex flex-col items-center lg:flex-row md:!pt-16">
+        <main className="dark:text-light flex items-center pt-6 min-h-screen pb-24 md:pb-0  ">
+          <Layout className="flex flex-col items-center xl:flex-row">
             <div className="lg:hidden text-center pb-2">
               <AnimatedText
                 text="Architect"
@@ -29,10 +29,10 @@ const Home: NextPage = () => {
                 className="!text-4xl  !text-primary dark:!text-primaryDark"
               />
             </div>
-            <div className="w-full lg:w-1/2">
+            <div className="w-full xl:w-1/2">
               <OrbScene />
             </div>
-            <div className="lg:p-16 w-full lg:w-1/2 text-left">
+            <div className="lg:p-16 w-full xl:w-1/2 text-left">
               <div className="hidden lg:block">
                 <AnimatedText
                   text="Architect"
@@ -44,7 +44,7 @@ const Home: NextPage = () => {
                 />
               </div>
               <div className="flex flex-col items-center lg:items-start">
-                <p className="py-4 font-medium lg:text-2xl text-base text-center">
+                <p className="py-4 font-medium lg:text-2xl text-base text-center lg:text-left">
                   A full-stack developer and start-up vet. Experienced in web
                   and mobile development. Putting complicating things together
                   since 2019.

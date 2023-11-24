@@ -13,7 +13,7 @@ export const OrbScene = (props: Props) => {
   const [showButtontext, setShowButtontext] = useState<boolean>(false);
   const { width } = useWindowSize();
   return (
-    <div className=" bg-black flex flex-col justify-end items-center rounded-lg overflow-hidden h-[400px] md:h-[450px] lg:h-[500px] 3xl:h-[650px] text-white shadow-lg">
+    <div className=" bg-black flex flex-col justify-end items-center rounded-lg overflow-hidden h-[400px] md:h-[500px] lg:h-[600px] xl:h-[500px] 3xl:h-[650px] text-white shadow-lg">
       <motion.div
         animate={{ y: 100, scale: 2 }}
         transition={{ delay: 0.5, duration: 5, ease: "easeInOut" }}

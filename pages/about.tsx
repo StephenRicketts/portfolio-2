@@ -40,7 +40,7 @@ const about = (props: Props) => {
                 Bio
               </h1>
               <p className="w-full lg:w-11/12 text-sm xl:text-base pb-2">
-                Hello! My name is Stephen Ricketts. I am dedicated full-stack
+                Hello! My name is Stephen Ricketts. I am a dedicated full-stack
                 developer (recently working mostly in the front-end), with
                 proven experience in producing performant and industry-verified
                 web and mobile applications. I have been writing TypeScript code
@@ -60,6 +60,7 @@ const about = (props: Props) => {
                 <TextLink
                   padding={"pl-1"}
                   href="mailto:stephen.ricketts.dev@gmail.com"
+                  noTarget
                 >
                   {"contact me"}
                 </TextLink>
