@@ -45,9 +45,8 @@ const Home: NextPage = () => {
               </div>
               <div className="flex flex-col items-center lg:items-start">
                 <p className="py-4 font-medium lg:text-2xl text-base text-center lg:text-left">
-                  A full-stack developer and start-up vet. Experienced in web
-                  and mobile development. Putting complicating things together
-                  since 2019.
+                  Hi, I&apos;m Stephen Ricketts. A full-stack developer and
+                  start-up vet, experienced in web and mobile development.
                 </p>
                 <div className="flex items-center pt-8 ">
                   <div className="h-[54px] w-[132px] dark:bg-primaryDarkDim bg-primaryDim absolute z-0 -mb-1 rounded-lg rounded-l-xl rounded-r-lg" />
