@@ -49,18 +49,9 @@ const projects = () => {
               <TextLink padding="px-1" href={"https://liifer.com/home"}>
                 Liifer
               </TextLink>
-              technologies to develop and maintain their apps. In this section I
-              briefly discuss some of these features and some of the
-              libraries/tech used in development. If you have any questions
-              about my recent experience please
-              <TextLink
-                href="mailto:stephen.ricketts.dev@gmail.com"
-                padding="pl-1"
-                noTarget
-              >
-                email me
-              </TextLink>
-              .
+              technologies to develop and maintain their apps. Here I will
+              discuss some of the interesting features I added and some of the
+              libraries/tech used in development.
             </p>
           </div>
           <div className="grid grid-cols-12 gap-y-8 xl:gap-y-24 xl:gap-x-16  md:gap-y-24 ">

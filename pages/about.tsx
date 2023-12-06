@@ -41,17 +41,13 @@ const about = (props: Props) => {
               </h1>
               <p className="w-full lg:w-11/12 text-sm xl:text-base pb-2">
                 Hello! My name is Stephen Ricketts. I am a dedicated full-stack
-                developer (recently working mostly in the front-end), with
-                proven experience in producing performant and industry-verified
-                web and mobile applications. I have been writing TypeScript code
-                nearly every day for the past 3 years. In that time, I have
-                implemented many features, integrating many APIs, and done all
-                the things you would expect from a lead front-end developer.
+                developer with proven experience in producing performant and
+                industry-verified web and mobile applications.
               </p>
               <p className="w-full lg:w-11/12 text-sm xl:text-base pb-2">
-                I am dedicated to learning new skills and keeping up with the
-                latest tech. I am flexible and willing to learn basically
-                anything I need to, including new languages and frameworks.
+                I enjoy learning new skills and keeping up with the latest tech.
+                I am flexible and willing to learn basically anything I need to,
+                including new languages and frameworks.
               </p>
               <p className="w-full lg:w-11/12 text-sm xl:text-base">
                 I am looking to expand upon my list of production apps so if you

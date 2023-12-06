@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
-import { motion, useScroll } from "framer-motion";
-import { LiIcon } from "./LiIcon";
+import { motion } from "framer-motion";
 import Link from "next/link";
-import { useWindowSize } from "./hooks/useWindowSize";
 
 type DetailsProps = {
   position: string;
@@ -28,7 +26,6 @@ const Details: React.FC<DetailsProps> = ({
       ref={ref}
       className="my-8 first:-mt-1 w-full lg:w-[60%] md:w-[80%] mx-auto flex flex-col items-start justify-between "
     >
-      {/* <LiIcon reference={ref} /> */}
       <motion.div
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
@@ -58,11 +55,6 @@ const Details: React.FC<DetailsProps> = ({
 export const Experience = () => {
   const ref = useRef(null);
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "center start"],
-  });
-
   return (
     <div className="mt-6">
       <h2 className="font-bold text-3xl mb-10 md:mb-16 w-full text-center">
@@ -77,7 +69,7 @@ export const Experience = () => {
         <ul className="w-full flex flex-col items-start justify-between">
           <Details
             work={
-              "After having brough the Liifer Web App to production I moved onto working on the Overwolf extention and porting the app to Android and iOS."
+              "After having brought the Liifer web app to production, I continued to maintain it and also added some of the more interesting features to the Overwolf extension, including game-tracking and in-game notifications. During this period I also ported the app to iOS and Android."
             }
             address={"remote"}
             time="7 months"
@@ -87,7 +79,7 @@ export const Experience = () => {
           />
           <Details
             work={
-              "In this position I created the front end for the Liifer Web App. This included started the app from scratch, choosing the tech stack and the many libraries used in development, a major redesign, and bringing the app to production."
+              "In this position I created the front end for the Liifer web app. This included choosing the tech stack, developing the app with input from creators and designers, bringing the app to production, and continuing to maintain it while we built usership."
             }
             address={"remote"}
             time="2 years"
@@ -100,7 +92,7 @@ export const Experience = () => {
               "After graduating from a bootcamp and the end of 2019, I completed a few freelance contracts using React and React Native. In this time I built landing pages and worked on a mobile app created by other contract workers."
             }
             address={"remote"}
-            time="1 year"
+            time="6 months"
             position={"Freelance Web Dev"}
           />
         </ul>
